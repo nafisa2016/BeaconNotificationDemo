@@ -1,0 +1,842 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7814FE9420319EE500143347 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7814FE9320319EE500143347 /* AppDelegate.swift */; };
+		7814FE9620319EE500143347 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7814FE9520319EE500143347 /* ViewController.swift */; };
+		7814FE9920319EE500143347 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7814FE9720319EE500143347 /* Main.storyboard */; };
+		7814FE9B20319EE500143347 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7814FE9A20319EE500143347 /* Assets.xcassets */; };
+		7814FE9E20319EE500143347 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7814FE9C20319EE500143347 /* LaunchScreen.storyboard */; };
+		7814FEA920319EE500143347 /* BeaconNotificationDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7814FEA820319EE500143347 /* BeaconNotificationDemoTests.swift */; };
+		7814FEB420319EE500143347 /* BeaconNotificationDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7814FEB320319EE500143347 /* BeaconNotificationDemoUITests.swift */; };
+		7814FEB920319EE500143347 /* BeaconNotificationDemo WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 7814FEB820319EE500143347 /* BeaconNotificationDemo WatchKit App.app */; };
+		7814FEBF20319EE500143347 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7814FEBD20319EE500143347 /* Interface.storyboard */; };
+		7814FEC120319EE500143347 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7814FEC020319EE500143347 /* Assets.xcassets */; };
+		7814FEC820319EE500143347 /* BeaconNotificationDemo WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7814FEC720319EE500143347 /* BeaconNotificationDemo WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		7814FECD20319EE500143347 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7814FECC20319EE500143347 /* InterfaceController.swift */; };
+		7814FECF20319EE500143347 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7814FECE20319EE500143347 /* ExtensionDelegate.swift */; };
+		7814FED120319EE500143347 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7814FED020319EE500143347 /* NotificationController.swift */; };
+		7814FED320319EE500143347 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7814FED220319EE500143347 /* ComplicationController.swift */; };
+		7814FED520319EE500143347 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7814FED420319EE500143347 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7814FEA520319EE500143347 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7814FE8820319EE500143347 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7814FE8F20319EE500143347;
+			remoteInfo = BeaconNotificationDemo;
+		};
+		7814FEB020319EE500143347 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7814FE8820319EE500143347 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7814FE8F20319EE500143347;
+			remoteInfo = BeaconNotificationDemo;
+		};
+		7814FEBA20319EE500143347 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7814FE8820319EE500143347 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7814FEB720319EE500143347;
+			remoteInfo = "BeaconNotificationDemo WatchKit App";
+		};
+		7814FEC920319EE500143347 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7814FE8820319EE500143347 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7814FEC620319EE500143347;
+			remoteInfo = "BeaconNotificationDemo WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7814FEDD20319EE500143347 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				7814FEC820319EE500143347 /* BeaconNotificationDemo WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7814FEE120319EE500143347 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				7814FEB920319EE500143347 /* BeaconNotificationDemo WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		7814FE9020319EE500143347 /* BeaconNotificationDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeaconNotificationDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7814FE9320319EE500143347 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7814FE9520319EE500143347 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7814FE9820319EE500143347 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7814FE9A20319EE500143347 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7814FE9D20319EE500143347 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7814FE9F20319EE500143347 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7814FEA420319EE500143347 /* BeaconNotificationDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeaconNotificationDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7814FEA820319EE500143347 /* BeaconNotificationDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconNotificationDemoTests.swift; sourceTree = "<group>"; };
+		7814FEAA20319EE500143347 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7814FEAF20319EE500143347 /* BeaconNotificationDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeaconNotificationDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7814FEB320319EE500143347 /* BeaconNotificationDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconNotificationDemoUITests.swift; sourceTree = "<group>"; };
+		7814FEB520319EE500143347 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7814FEB820319EE500143347 /* BeaconNotificationDemo WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BeaconNotificationDemo WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7814FEBE20319EE500143347 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		7814FEC020319EE500143347 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7814FEC220319EE500143347 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7814FEC720319EE500143347 /* BeaconNotificationDemo WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "BeaconNotificationDemo WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7814FECC20319EE500143347 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		7814FECE20319EE500143347 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		7814FED020319EE500143347 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		7814FED220319EE500143347 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		7814FED420319EE500143347 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7814FED620319EE500143347 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7814FED720319EE500143347 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7814FE8D20319EE500143347 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7814FEA120319EE500143347 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7814FEAC20319EE500143347 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7814FEC420319EE500143347 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7814FE8720319EE500143347 = {
+			isa = PBXGroup;
+			children = (
+				7814FE9220319EE500143347 /* BeaconNotificationDemo */,
+				7814FEA720319EE500143347 /* BeaconNotificationDemoTests */,
+				7814FEB220319EE500143347 /* BeaconNotificationDemoUITests */,
+				7814FEBC20319EE500143347 /* BeaconNotificationDemo WatchKit App */,
+				7814FECB20319EE500143347 /* BeaconNotificationDemo WatchKit Extension */,
+				7814FE9120319EE500143347 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7814FE9120319EE500143347 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7814FE9020319EE500143347 /* BeaconNotificationDemo.app */,
+				7814FEA420319EE500143347 /* BeaconNotificationDemoTests.xctest */,
+				7814FEAF20319EE500143347 /* BeaconNotificationDemoUITests.xctest */,
+				7814FEB820319EE500143347 /* BeaconNotificationDemo WatchKit App.app */,
+				7814FEC720319EE500143347 /* BeaconNotificationDemo WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7814FE9220319EE500143347 /* BeaconNotificationDemo */ = {
+			isa = PBXGroup;
+			children = (
+				7814FE9320319EE500143347 /* AppDelegate.swift */,
+				7814FE9520319EE500143347 /* ViewController.swift */,
+				7814FE9720319EE500143347 /* Main.storyboard */,
+				7814FE9A20319EE500143347 /* Assets.xcassets */,
+				7814FE9C20319EE500143347 /* LaunchScreen.storyboard */,
+				7814FE9F20319EE500143347 /* Info.plist */,
+			);
+			path = BeaconNotificationDemo;
+			sourceTree = "<group>";
+		};
+		7814FEA720319EE500143347 /* BeaconNotificationDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				7814FEA820319EE500143347 /* BeaconNotificationDemoTests.swift */,
+				7814FEAA20319EE500143347 /* Info.plist */,
+			);
+			path = BeaconNotificationDemoTests;
+			sourceTree = "<group>";
+		};
+		7814FEB220319EE500143347 /* BeaconNotificationDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7814FEB320319EE500143347 /* BeaconNotificationDemoUITests.swift */,
+				7814FEB520319EE500143347 /* Info.plist */,
+			);
+			path = BeaconNotificationDemoUITests;
+			sourceTree = "<group>";
+		};
+		7814FEBC20319EE500143347 /* BeaconNotificationDemo WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				7814FEBD20319EE500143347 /* Interface.storyboard */,
+				7814FEC020319EE500143347 /* Assets.xcassets */,
+				7814FEC220319EE500143347 /* Info.plist */,
+			);
+			path = "BeaconNotificationDemo WatchKit App";
+			sourceTree = "<group>";
+		};
+		7814FECB20319EE500143347 /* BeaconNotificationDemo WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				7814FECC20319EE500143347 /* InterfaceController.swift */,
+				7814FECE20319EE500143347 /* ExtensionDelegate.swift */,
+				7814FED020319EE500143347 /* NotificationController.swift */,
+				7814FED220319EE500143347 /* ComplicationController.swift */,
+				7814FED420319EE500143347 /* Assets.xcassets */,
+				7814FED620319EE500143347 /* Info.plist */,
+				7814FED720319EE500143347 /* PushNotificationPayload.apns */,
+			);
+			path = "BeaconNotificationDemo WatchKit Extension";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7814FE8F20319EE500143347 /* BeaconNotificationDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7814FEE220319EE500143347 /* Build configuration list for PBXNativeTarget "BeaconNotificationDemo" */;
+			buildPhases = (
+				7814FE8C20319EE500143347 /* Sources */,
+				7814FE8D20319EE500143347 /* Frameworks */,
+				7814FE8E20319EE500143347 /* Resources */,
+				7814FEE120319EE500143347 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7814FEBB20319EE500143347 /* PBXTargetDependency */,
+			);
+			name = BeaconNotificationDemo;
+			productName = BeaconNotificationDemo;
+			productReference = 7814FE9020319EE500143347 /* BeaconNotificationDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7814FEA320319EE500143347 /* BeaconNotificationDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7814FEE520319EE500143347 /* Build configuration list for PBXNativeTarget "BeaconNotificationDemoTests" */;
+			buildPhases = (
+				7814FEA020319EE500143347 /* Sources */,
+				7814FEA120319EE500143347 /* Frameworks */,
+				7814FEA220319EE500143347 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7814FEA620319EE500143347 /* PBXTargetDependency */,
+			);
+			name = BeaconNotificationDemoTests;
+			productName = BeaconNotificationDemoTests;
+			productReference = 7814FEA420319EE500143347 /* BeaconNotificationDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7814FEAE20319EE500143347 /* BeaconNotificationDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7814FEE820319EE500143347 /* Build configuration list for PBXNativeTarget "BeaconNotificationDemoUITests" */;
+			buildPhases = (
+				7814FEAB20319EE500143347 /* Sources */,
+				7814FEAC20319EE500143347 /* Frameworks */,
+				7814FEAD20319EE500143347 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7814FEB120319EE500143347 /* PBXTargetDependency */,
+			);
+			name = BeaconNotificationDemoUITests;
+			productName = BeaconNotificationDemoUITests;
+			productReference = 7814FEAF20319EE500143347 /* BeaconNotificationDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		7814FEB720319EE500143347 /* BeaconNotificationDemo WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7814FEDE20319EE500143347 /* Build configuration list for PBXNativeTarget "BeaconNotificationDemo WatchKit App" */;
+			buildPhases = (
+				7814FEB620319EE500143347 /* Resources */,
+				7814FEDD20319EE500143347 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7814FECA20319EE500143347 /* PBXTargetDependency */,
+			);
+			name = "BeaconNotificationDemo WatchKit App";
+			productName = "BeaconNotificationDemo WatchKit App";
+			productReference = 7814FEB820319EE500143347 /* BeaconNotificationDemo WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		7814FEC620319EE500143347 /* BeaconNotificationDemo WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7814FEDA20319EE500143347 /* Build configuration list for PBXNativeTarget "BeaconNotificationDemo WatchKit Extension" */;
+			buildPhases = (
+				7814FEC320319EE500143347 /* Sources */,
+				7814FEC420319EE500143347 /* Frameworks */,
+				7814FEC520319EE500143347 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "BeaconNotificationDemo WatchKit Extension";
+			productName = "BeaconNotificationDemo WatchKit Extension";
+			productReference = 7814FEC720319EE500143347 /* BeaconNotificationDemo WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7814FE8820319EE500143347 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = com.nafisa;
+				TargetAttributes = {
+					7814FE8F20319EE500143347 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					7814FEA320319EE500143347 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 7814FE8F20319EE500143347;
+					};
+					7814FEAE20319EE500143347 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 7814FE8F20319EE500143347;
+					};
+					7814FEB720319EE500143347 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					7814FEC620319EE500143347 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 7814FE8B20319EE500143347 /* Build configuration list for PBXProject "BeaconNotificationDemo" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7814FE8720319EE500143347;
+			productRefGroup = 7814FE9120319EE500143347 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7814FE8F20319EE500143347 /* BeaconNotificationDemo */,
+				7814FEA320319EE500143347 /* BeaconNotificationDemoTests */,
+				7814FEAE20319EE500143347 /* BeaconNotificationDemoUITests */,
+				7814FEB720319EE500143347 /* BeaconNotificationDemo WatchKit App */,
+				7814FEC620319EE500143347 /* BeaconNotificationDemo WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7814FE8E20319EE500143347 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7814FE9E20319EE500143347 /* LaunchScreen.storyboard in Resources */,
+				7814FE9B20319EE500143347 /* Assets.xcassets in Resources */,
+				7814FE9920319EE500143347 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7814FEA220319EE500143347 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7814FEAD20319EE500143347 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7814FEB620319EE500143347 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7814FEC120319EE500143347 /* Assets.xcassets in Resources */,
+				7814FEBF20319EE500143347 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7814FEC520319EE500143347 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7814FED520319EE500143347 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7814FE8C20319EE500143347 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7814FE9620319EE500143347 /* ViewController.swift in Sources */,
+				7814FE9420319EE500143347 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7814FEA020319EE500143347 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7814FEA920319EE500143347 /* BeaconNotificationDemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7814FEAB20319EE500143347 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7814FEB420319EE500143347 /* BeaconNotificationDemoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7814FEC320319EE500143347 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7814FED120319EE500143347 /* NotificationController.swift in Sources */,
+				7814FED320319EE500143347 /* ComplicationController.swift in Sources */,
+				7814FECF20319EE500143347 /* ExtensionDelegate.swift in Sources */,
+				7814FECD20319EE500143347 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7814FEA620319EE500143347 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7814FE8F20319EE500143347 /* BeaconNotificationDemo */;
+			targetProxy = 7814FEA520319EE500143347 /* PBXContainerItemProxy */;
+		};
+		7814FEB120319EE500143347 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7814FE8F20319EE500143347 /* BeaconNotificationDemo */;
+			targetProxy = 7814FEB020319EE500143347 /* PBXContainerItemProxy */;
+		};
+		7814FEBB20319EE500143347 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7814FEB720319EE500143347 /* BeaconNotificationDemo WatchKit App */;
+			targetProxy = 7814FEBA20319EE500143347 /* PBXContainerItemProxy */;
+		};
+		7814FECA20319EE500143347 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7814FEC620319EE500143347 /* BeaconNotificationDemo WatchKit Extension */;
+			targetProxy = 7814FEC920319EE500143347 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7814FE9720319EE500143347 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7814FE9820319EE500143347 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7814FE9C20319EE500143347 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7814FE9D20319EE500143347 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		7814FEBD20319EE500143347 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7814FEBE20319EE500143347 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7814FED820319EE500143347 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7814FED920319EE500143347 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7814FEDB20319EE500143347 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 42KMS8LBB5;
+				INFOPLIST_FILE = "BeaconNotificationDemo WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nafisa.BeaconNotificationDemo.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+			};
+			name = Debug;
+		};
+		7814FEDC20319EE500143347 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 42KMS8LBB5;
+				INFOPLIST_FILE = "BeaconNotificationDemo WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nafisa.BeaconNotificationDemo.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+			};
+			name = Release;
+		};
+		7814FEDF20319EE500143347 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 42KMS8LBB5;
+				IBSC_MODULE = BeaconNotificationDemo_WatchKit_Extension;
+				INFOPLIST_FILE = "BeaconNotificationDemo WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nafisa.BeaconNotificationDemo.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+			};
+			name = Debug;
+		};
+		7814FEE020319EE500143347 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 42KMS8LBB5;
+				IBSC_MODULE = BeaconNotificationDemo_WatchKit_Extension;
+				INFOPLIST_FILE = "BeaconNotificationDemo WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nafisa.BeaconNotificationDemo.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+			};
+			name = Release;
+		};
+		7814FEE320319EE500143347 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 42KMS8LBB5;
+				INFOPLIST_FILE = BeaconNotificationDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nafisa.BeaconNotificationDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7814FEE420319EE500143347 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 42KMS8LBB5;
+				INFOPLIST_FILE = BeaconNotificationDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nafisa.BeaconNotificationDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7814FEE620319EE500143347 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 42KMS8LBB5;
+				INFOPLIST_FILE = BeaconNotificationDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nafisa.BeaconNotificationDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BeaconNotificationDemo.app/BeaconNotificationDemo";
+			};
+			name = Debug;
+		};
+		7814FEE720319EE500143347 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 42KMS8LBB5;
+				INFOPLIST_FILE = BeaconNotificationDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nafisa.BeaconNotificationDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BeaconNotificationDemo.app/BeaconNotificationDemo";
+			};
+			name = Release;
+		};
+		7814FEE920319EE500143347 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 42KMS8LBB5;
+				INFOPLIST_FILE = BeaconNotificationDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nafisa.BeaconNotificationDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BeaconNotificationDemo;
+			};
+			name = Debug;
+		};
+		7814FEEA20319EE500143347 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 42KMS8LBB5;
+				INFOPLIST_FILE = BeaconNotificationDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nafisa.BeaconNotificationDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BeaconNotificationDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7814FE8B20319EE500143347 /* Build configuration list for PBXProject "BeaconNotificationDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7814FED820319EE500143347 /* Debug */,
+				7814FED920319EE500143347 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7814FEDA20319EE500143347 /* Build configuration list for PBXNativeTarget "BeaconNotificationDemo WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7814FEDB20319EE500143347 /* Debug */,
+				7814FEDC20319EE500143347 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7814FEDE20319EE500143347 /* Build configuration list for PBXNativeTarget "BeaconNotificationDemo WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7814FEDF20319EE500143347 /* Debug */,
+				7814FEE020319EE500143347 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7814FEE220319EE500143347 /* Build configuration list for PBXNativeTarget "BeaconNotificationDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7814FEE320319EE500143347 /* Debug */,
+				7814FEE420319EE500143347 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7814FEE520319EE500143347 /* Build configuration list for PBXNativeTarget "BeaconNotificationDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7814FEE620319EE500143347 /* Debug */,
+				7814FEE720319EE500143347 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7814FEE820319EE500143347 /* Build configuration list for PBXNativeTarget "BeaconNotificationDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7814FEE920319EE500143347 /* Debug */,
+				7814FEEA20319EE500143347 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7814FE8820319EE500143347 /* Project object */;
+}
