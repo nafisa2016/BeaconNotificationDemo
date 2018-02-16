@@ -23,6 +23,9 @@
 		7814FED120319EE500143347 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7814FED020319EE500143347 /* NotificationController.swift */; };
 		7814FED320319EE500143347 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7814FED220319EE500143347 /* ComplicationController.swift */; };
 		7814FED520319EE500143347 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7814FED420319EE500143347 /* Assets.xcassets */; };
+		7814FEEC2032EE3500143347 /* BeaconModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7814FEEB2032EE3500143347 /* BeaconModel.swift */; };
+		7814FEEF2032EF7200143347 /* BeaconHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7814FEEE2032EF7200143347 /* BeaconHandler.swift */; };
+		7814FEF12032EFE300143347 /* BeaconViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7814FEF02032EFE300143347 /* BeaconViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +110,9 @@
 		7814FED420319EE500143347 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7814FED620319EE500143347 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7814FED720319EE500143347 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		7814FEEB2032EE3500143347 /* BeaconModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconModel.swift; sourceTree = "<group>"; };
+		7814FEEE2032EF7200143347 /* BeaconHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconHandler.swift; sourceTree = "<group>"; };
+		7814FEF02032EFE300143347 /* BeaconViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,11 +175,13 @@
 			isa = PBXGroup;
 			children = (
 				7814FE9320319EE500143347 /* AppDelegate.swift */,
-				7814FE9520319EE500143347 /* ViewController.swift */,
+				7814FEF32032F01200143347 /* View */,
 				7814FE9720319EE500143347 /* Main.storyboard */,
 				7814FE9A20319EE500143347 /* Assets.xcassets */,
 				7814FE9C20319EE500143347 /* LaunchScreen.storyboard */,
 				7814FE9F20319EE500143347 /* Info.plist */,
+				7814FEED2032EE3D00143347 /* Model */,
+				7814FEF22032EFF700143347 /* ViewModel */,
 			);
 			path = BeaconNotificationDemo;
 			sourceTree = "<group>";
@@ -218,6 +226,31 @@
 				7814FED720319EE500143347 /* PushNotificationPayload.apns */,
 			);
 			path = "BeaconNotificationDemo WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		7814FEED2032EE3D00143347 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7814FEEB2032EE3500143347 /* BeaconModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7814FEF22032EFF700143347 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7814FEEE2032EF7200143347 /* BeaconHandler.swift */,
+				7814FEF02032EFE300143347 /* BeaconViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7814FEF32032F01200143347 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7814FE9520319EE500143347 /* ViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -325,6 +358,11 @@
 					7814FE8F20319EE500143347 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					7814FEA320319EE500143347 = {
 						CreatedOnToolsVersion = 9.2;
@@ -417,6 +455,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7814FEF12032EFE300143347 /* BeaconViewModel.swift in Sources */,
+				7814FEEF2032EF7200143347 /* BeaconHandler.swift in Sources */,
+				7814FEEC2032EE3500143347 /* BeaconModel.swift in Sources */,
 				7814FE9620319EE500143347 /* ViewController.swift in Sources */,
 				7814FE9420319EE500143347 /* AppDelegate.swift in Sources */,
 			);
