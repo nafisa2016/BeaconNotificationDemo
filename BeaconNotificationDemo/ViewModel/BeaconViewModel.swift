@@ -9,19 +9,18 @@
 import Foundation
 
 @objc protocol ViewModelOperations : class {
-    func sendNotification()
     func updateUI(proximityValue: String)
 }
 
 class BeaconViewModel {
     
+    //MARK:- properties
     var beaconModel : BeaconModel
-    
     //update UI protocol delegate
-    weak var UIdelegate : UIOperation? 
-    
+    weak var UIdelegate : UIOperation?
     var beaconHandler : BeaconHandler!
     
+    //MARK:- Create BeaconHandler instance
     init(){
         
         //this should come from UI finally
@@ -34,30 +33,23 @@ class BeaconViewModel {
         
     }
     
-    //
+    //MARK:- Create Beacon Region
     func createBeacon()  {
         
         beaconHandler.createBeaconRegion()
     }
     
-    
-    
 }
 
+//MARK:- Conform to ViewModelOperations protocol
 extension BeaconViewModel : ViewModelOperations {
     
     func updateUI(proximityValue: String) {
         
         UIdelegate?.updateLabel(UUID: "\(beaconModel.UUID)", majorValue: "\(beaconModel.majorValue)", minorValue: "\(beaconModel.minorValue)", beaconIdentifier: beaconModel.beaconID, proximityValue: proximityValue)
-    }
-    
-    
-    //
-    func sendNotification() {
         
-        UIdelegate?.sendNotification()
     }
     
 }
 
- 
+

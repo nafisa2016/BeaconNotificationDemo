@@ -7,16 +7,39 @@
 //
 
 import UIKit
+import UserNotifications
+import CoreLocation
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate {
 
     var window: UIWindow?
-
+    var locationManager: CLLocationManager!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) {(accepted, error) in
+            if !accepted {
+                print("Notification access denied.")
+            }
+        }
+        
+        if let key = launchOptions?.keys {
+            
+            if key.contains(.location) {
+                
+                locationManager = CLLocationManager()
+                locationManager.delegate = self
+                locationManager.requestAlwaysAuthorization()
+                locationManager.allowsBackgroundLocationUpdates = true
+                locationManager.startUpdatingLocation()
+                
+            }
+        }
+        
         return true
+     
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

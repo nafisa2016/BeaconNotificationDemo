@@ -9,33 +9,36 @@
 import Foundation
 import CoreLocation
 
-
-
 class BeaconHandler : NSObject {
     
+    //MARK:- Properties
     var locationManager : CLLocationManager!
     var beaconModel : BeaconModel?
-    var beaconRegion:CLBeaconRegion!
+    var beaconRegion: CLBeaconRegion!
     
     var beaconProximity = ""
-    
     weak var viewModeldelegate : ViewModelOperations?
     
+    //MARK:- initialize
     override init(){
         
         super.init()
-        
         locationManager = CLLocationManager()
         locationManager.delegate = self
         locationManager.requestAlwaysAuthorization()
         
+        locationManager.allowsBackgroundLocationUpdates = true
+        locationManager.pausesLocationUpdatesAutomatically = false
+        
     }
     
     convenience init(beaconModel: BeaconModel) {
+        
         self.init()
         self.beaconModel = beaconModel
     }
     
+    //MARK:- Create Beacon Region
     func createBeaconRegion(){
         
         if CLLocationManager.isMonitoringAvailable(for:
@@ -48,15 +51,16 @@ class BeaconHandler : NSObject {
             
             // Create the region and begin monitoring it.
             beaconRegion = CLBeaconRegion(proximityUUID: beaconModel.UUID,
-                                        identifier: beaconModel.beaconID)
+                                          identifier: beaconModel.beaconID)
             self.locationManager.startMonitoring(for: beaconRegion)
         }
     }
     
-    
+    //MARK:- Get Beacon proximity
     func getBeaconProximity(proximity: CLProximity){
         
         switch proximity {
+            
         case .far:
             print("beacon is far")
             beaconProximity = "Far"
@@ -76,14 +80,17 @@ class BeaconHandler : NSObject {
     
 }
 
+//MARK:- Conform to CLLocationManagerDelegate
 extension BeaconHandler : CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
+        
         print("beacon entered: \(region)")
-        //notif
+        
     }
     
     func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
+        
         print("beacon exit: \(region)")
     }
     
@@ -93,6 +100,7 @@ extension BeaconHandler : CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didDetermineState state: CLRegionState, for region: CLRegion) {
+        
         //
         if state == .inside {
             locationManager.startRangingBeacons(in: beaconRegion)
@@ -102,28 +110,29 @@ extension BeaconHandler : CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], in region: CLBeaconRegion) {
+        
         if beacons.count > 0 {
             
-            if beacons.count > 0 {
-                
-                getBeaconProximity(proximity: beacons[0].proximity)
-                locationManager.stopRangingBeacons(in: region)
-            }
+            getBeaconProximity(proximity: beacons[0].proximity)
+            locationManager.stopRangingBeacons(in: region)
             
             viewModeldelegate?.updateUI(proximityValue: beaconProximity)
-           
         }
+        
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        
         print("failed: \(error)")
     }
     
     func locationManager(_ manager: CLLocationManager, monitoringDidFailFor region: CLRegion?, withError error: Error) {
+        
         print("failed: \(error)")
     }
     
     func locationManager(_ manager: CLLocationManager, rangingBeaconsDidFailFor region: CLBeaconRegion, withError error: Error) {
+        
         print("failed: \(error)")
     }
 }
