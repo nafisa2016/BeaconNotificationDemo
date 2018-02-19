@@ -69,7 +69,7 @@ class BeaconHandler : NSObject {
             beaconProximity = "immediate"
         case .near:
             print("beacon is near")
-            beaconProximity = "immediate"
+            beaconProximity = "near"
         case .unknown:
             print("beacon unknown")
             beaconProximity = "unknown"
@@ -86,12 +86,14 @@ extension BeaconHandler : CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
         
         print("beacon entered: \(region)")
+        viewModeldelegate?.getRegionState(state: "Inside beacon region")
         
     }
     
     func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
         
         print("beacon exit: \(region)")
+        viewModeldelegate?.getRegionState(state: "Outside Beacon Region")
     }
     
     func locationManager(_ manager: CLLocationManager, didStartMonitoringFor region: CLRegion) {
@@ -114,7 +116,7 @@ extension BeaconHandler : CLLocationManagerDelegate {
         if beacons.count > 0 {
             
             getBeaconProximity(proximity: beacons[0].proximity)
-            locationManager.stopRangingBeacons(in: region)
+            //locationManager.stopRangingBeacons(in: region)
             
             viewModeldelegate?.updateUI(proximityValue: beaconProximity)
         }

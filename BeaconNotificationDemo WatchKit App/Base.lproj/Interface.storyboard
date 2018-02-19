@@ -16,6 +16,9 @@
                     <items>
                         <label alignment="left" text="Beacon Proximity" id="tMH-E3-ygL"/>
                     </items>
+                    <connections>
+                        <outlet property="proximityLbl" destination="tMH-E3-ygL" id="acT-Tr-Ufv"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="220" y="345"/>

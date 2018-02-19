@@ -12,6 +12,7 @@ import UserNotifications
 
 @objc protocol UIOperation : class {
     func updateLabel(UUID: String,majorValue : String,minorValue : String, beaconIdentifier: String,proximityValue: String)
+    func sendNotification(title:String,beaconState: String)
 }
 
 class ViewController: UIViewController{
@@ -45,29 +46,7 @@ class ViewController: UIViewController{
         // Dispose of any resources that can be recreated.
     }
     
-    //MARK:- Send notification
-    func sendNotification(proximityValue: String) {
-        
-        print("notification ")
-        
-        let content = UNMutableNotificationContent()
-        content.title = "Beacon Proximity"
-        content.body = "proximity = \(proximityValue)"
-        content.sound = UNNotificationSound.default()
-        
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 0.01, repeats: false)
-        
-        let request = UNNotificationRequest(identifier: "BeaconNotification", content: content, trigger: trigger)
-        
-        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
-        UNUserNotificationCenter.current().add(request) {(error) in
-            if let error = error {
-                print("error: \(error)")
-            }
-        }
-        
-    }
-
+    
 }
 
 //MARK:- Conform to UIOperation protocol
@@ -82,24 +61,34 @@ extension ViewController : UIOperation {
         beaconID.text = beaconIdentifier
         proximityValueLbl.text = proximityValue
         
-        sendNotification(proximityValue: proximityValue)
-        
-        //app is in background send notification
-        let state = UIApplication.shared.applicationState
-        
-        switch state {
-        case .background:
-            print("app is in background")
-            sendNotification(proximityValue: proximityValue)
-        
-        default:
-            print("app is not in background")
-            return
-            
+        if !proximityValue.isEmpty {
+            sendNotification(title: "Beacon Proximity",beaconState: "proximity = \(proximityValue)")
         }
         
     }
     
+    //MARK:- Send notification
+    func sendNotification(title:String,beaconState: String) {
+        
+        print("notification ")
+        
+        let content = UNMutableNotificationContent()
+        content.title = title
+        content.body = beaconState
+        content.sound = UNNotificationSound.default()
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 0.01, repeats: false)
+        
+        let request = UNNotificationRequest(identifier: "BeaconNotification", content: content, trigger: trigger)
+        
+        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+        UNUserNotificationCenter.current().add(request) {(error) in
+            if let error = error {
+                print("error: \(error)")
+            }
+        }
+        
+    }
 }
 
 //MARK:- Conform to UNUserNotificationCenterDelegate

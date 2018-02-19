@@ -10,6 +10,7 @@ import Foundation
 
 @objc protocol ViewModelOperations : class {
     func updateUI(proximityValue: String)
+    func getRegionState(state: String)
 }
 
 class BeaconViewModel {
@@ -19,6 +20,7 @@ class BeaconViewModel {
     //update UI protocol delegate
     weak var UIdelegate : UIOperation?
     var beaconHandler : BeaconHandler!
+    let defaults = UserDefaults.standard
     
     //MARK:- Create BeaconHandler instance
     init(){
@@ -39,6 +41,21 @@ class BeaconViewModel {
         beaconHandler.createBeaconRegion()
     }
     
+    //
+    func storeProximity(proximityValue: String) {
+        
+        defaults.set(proximityValue, forKey: "proximity")
+    }
+    
+    func getProximity() -> String {
+        
+        var proximity = ""
+        
+        proximity = defaults.object(forKey: "proximity") as! String
+        
+        return proximity
+    }
+    
 }
 
 //MARK:- Conform to ViewModelOperations protocol
@@ -46,8 +63,23 @@ extension BeaconViewModel : ViewModelOperations {
     
     func updateUI(proximityValue: String) {
         
-        UIdelegate?.updateLabel(UUID: "\(beaconModel.UUID)", majorValue: "\(beaconModel.majorValue)", minorValue: "\(beaconModel.minorValue)", beaconIdentifier: beaconModel.beaconID, proximityValue: proximityValue)
+        //if proximity value matches previous value then don't update UI
+        let prevProximity = getProximity()
         
+        if prevProximity != proximityValue {
+            
+            storeProximity(proximityValue: proximityValue)
+            UIdelegate?.updateLabel(UUID: "\(beaconModel.UUID)", majorValue: "\(beaconModel.majorValue)", minorValue: "\(beaconModel.minorValue)", beaconIdentifier: beaconModel.beaconID, proximityValue: proximityValue)
+            
+        }
+        
+    }
+    
+    func getRegionState(state: String) {
+        
+        print("getRegion state")
+        
+        UIdelegate?.sendNotification(title: "Beacon", beaconState: "\(state)")
     }
     
 }
