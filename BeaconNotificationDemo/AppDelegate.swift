@@ -9,6 +9,7 @@
 import UIKit
 import UserNotifications
 import CoreLocation
+import WatchConnectivity
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate {
@@ -19,12 +20,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        //request authorization for notification
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) {(accepted, error) in
             if !accepted {
                 print("Notification access denied.")
             }
         }
         
+        //start communication between watch and iOS
+        if WCSession.isSupported() {
+            
+            let session = WCSession.default
+            session.delegate = self
+            session.activate()
+            
+        }
+        
+        //background beacon monitoring
         if let key = launchOptions?.keys {
             
             if key.contains(.location) {
@@ -62,10 +74,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate 
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+        
         let defaults = UserDefaults.standard
         defaults.set("", forKey: "proximity")
     }
 
-
 }
 
+//MARK:- Conform to WCSessionDelegate
+extension AppDelegate : WCSessionDelegate {
+    
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        
+        print("watch session activated")
+        
+    }
+    
+    func sessionDidBecomeInactive(_ session: WCSession) {
+        
+        print("watch session inactive")
+    }
+    
+    func sessionDidDeactivate(_ session: WCSession) {
+        
+        print("watch session ended")
+        
+    }
+}

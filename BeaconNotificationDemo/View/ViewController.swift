@@ -9,6 +9,7 @@
 import UIKit
 import CoreLocation
 import UserNotifications
+import WatchConnectivity
 
 @objc protocol UIOperation : class {
     func updateLabel(UUID: String,majorValue : String,minorValue : String, beaconIdentifier: String,proximityValue: String)
@@ -26,7 +27,9 @@ class ViewController: UIViewController{
     
     //view model
     lazy var beaconViewModel = BeaconViewModel()
-
+    //session to communicate with watch
+    let session = WCSession.default
+    
     //MARK:- viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,12 +43,11 @@ class ViewController: UIViewController{
         beaconViewModel.createBeacon()
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
     
 }
 
@@ -63,6 +65,13 @@ extension ViewController : UIOperation {
         
         if !proximityValue.isEmpty {
             sendNotification(title: "Beacon Proximity",beaconState: "proximity = \(proximityValue)")
+            
+            //pass beacon proximity to watch
+            if self.session.isPaired  && self.session.isWatchAppInstalled {
+                
+                print("proximity will be sent to watch")
+                sendToWatch(proximity: proximityValue)
+            }
         }
         
     }
@@ -88,6 +97,16 @@ extension ViewController : UIOperation {
             }
         }
         
+    }
+    
+    func sendToWatch(proximity: String){
+        
+        // send a message to the watch if it's reachable
+        if (self.session.isReachable) {
+            
+            let message = ["Proximity": proximity]
+            self.session.sendMessage(message as Any as! [String : Any], replyHandler: nil,errorHandler: nil)
+        }
     }
 }
 

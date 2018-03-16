@@ -86,14 +86,14 @@ extension BeaconHandler : CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
         
         print("beacon entered: \(region)")
-        viewModeldelegate?.getRegionState(state: "Inside beacon region")
+        viewModeldelegate?.setRegionState(state: "Inside beacon region")
         
     }
     
     func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
         
         print("beacon exit: \(region)")
-        viewModeldelegate?.getRegionState(state: "Outside Beacon Region")
+        viewModeldelegate?.setRegionState(state: "Outside Beacon Region")
     }
     
     func locationManager(_ manager: CLLocationManager, didStartMonitoringFor region: CLRegion) {
@@ -103,7 +103,6 @@ extension BeaconHandler : CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didDetermineState state: CLRegionState, for region: CLRegion) {
         
-        //
         if state == .inside {
             locationManager.startRangingBeacons(in: beaconRegion)
         } else {
@@ -116,7 +115,6 @@ extension BeaconHandler : CLLocationManagerDelegate {
         if beacons.count > 0 {
             
             getBeaconProximity(proximity: beacons[0].proximity)
-            //locationManager.stopRangingBeacons(in: region)
             
             viewModeldelegate?.updateUI(proximityValue: beaconProximity)
         }

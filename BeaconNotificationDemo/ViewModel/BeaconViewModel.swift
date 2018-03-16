@@ -10,7 +10,7 @@ import Foundation
 
 @objc protocol ViewModelOperations : class {
     func updateUI(proximityValue: String)
-    func getRegionState(state: String)
+    func setRegionState(state: String)
 }
 
 class BeaconViewModel {
@@ -24,10 +24,8 @@ class BeaconViewModel {
     
     //MARK:- Create BeaconHandler instance
     init(){
-        
-        //this should come from UI finally
+       
         beaconModel = BeaconModel(UUID: UUID(uuidString: "E2C56DB5-DFFB-48D2-B060-D0F5A71096E0")!, majorValue: 10, minorValue: 46, beaconID: "MYBEACON")
-        
         beaconHandler = BeaconHandler(beaconModel: beaconModel)
         
         //set delegate
@@ -41,7 +39,7 @@ class BeaconViewModel {
         beaconHandler.createBeaconRegion()
     }
     
-    //
+    //MARK:- Store proximity in user default
     func storeProximity(proximityValue: String) {
         
         defaults.set(proximityValue, forKey: "proximity")
@@ -50,8 +48,11 @@ class BeaconViewModel {
     func getProximity() -> String {
         
         var proximity = ""
-        
-        proximity = defaults.object(forKey: "proximity") as! String
+            
+        if let prevProximity = defaults.object(forKey: "proximity") as? String {
+            proximity = prevProximity
+            
+        }
         
         return proximity
     }
@@ -75,7 +76,7 @@ extension BeaconViewModel : ViewModelOperations {
         
     }
     
-    func getRegionState(state: String) {
+    func setRegionState(state: String) {
         
         print("getRegion state")
         

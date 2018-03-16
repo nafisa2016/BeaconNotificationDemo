@@ -8,15 +8,19 @@
 
 import WatchKit
 import Foundation
+import WatchConnectivity
 
 
 class InterfaceController: WKInterfaceController {
-
+    
+    let session = WCSession.default
+    
     @IBOutlet var proximityLbl: WKInterfaceLabel!
+    
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
-        // Configure interface objects here.
+        NotificationCenter.default.addObserver(self, selector: #selector(didReceiveProximity), name: NSNotification.Name(rawValue: "ReceivedProximity"), object: nil)
     }
     
     override func willActivate() {
@@ -28,5 +32,13 @@ class InterfaceController: WKInterfaceController {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
-
+    
+    @objc func didReceiveProximity(info: Notification){
+        
+        let proximity = info.userInfo!
+        proximityLbl.setText(proximity["Proximity"] as? String)
+    }
+    
 }
+
+
