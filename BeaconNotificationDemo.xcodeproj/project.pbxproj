@@ -655,7 +655,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 42KMS8LBB5;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "BeaconNotificationDemo WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nafisa.BeaconNotificationDemo.watchkitapp.watchkitextension;
@@ -673,7 +673,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 42KMS8LBB5;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "BeaconNotificationDemo WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nafisa.BeaconNotificationDemo.watchkitapp.watchkitextension;
@@ -692,7 +692,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 42KMS8LBB5;
+				DEVELOPMENT_TEAM = "";
 				IBSC_MODULE = BeaconNotificationDemo_WatchKit_Extension;
 				INFOPLIST_FILE = "BeaconNotificationDemo WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nafisa.BeaconNotificationDemo.watchkitapp;
@@ -711,7 +711,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 42KMS8LBB5;
+				DEVELOPMENT_TEAM = "";
 				IBSC_MODULE = BeaconNotificationDemo_WatchKit_Extension;
 				INFOPLIST_FILE = "BeaconNotificationDemo WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nafisa.BeaconNotificationDemo.watchkitapp;
@@ -729,7 +729,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 42KMS8LBB5;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = BeaconNotificationDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nafisa.BeaconNotificationDemo;
@@ -744,7 +744,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 42KMS8LBB5;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = BeaconNotificationDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nafisa.BeaconNotificationDemo;
