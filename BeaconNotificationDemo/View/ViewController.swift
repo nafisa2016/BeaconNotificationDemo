@@ -35,6 +35,8 @@ class ViewController: UIViewController{
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        UUIDValueLbl.numberOfLines = 0
+        
         //set delegate
         beaconViewModel.UIdelegate = self
         UNUserNotificationCenter.current().delegate = self

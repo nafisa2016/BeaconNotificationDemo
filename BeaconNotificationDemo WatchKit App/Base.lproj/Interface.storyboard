@@ -14,7 +14,8 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="BeaconNotificationDemo_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <label alignment="left" text="Beacon Proximity" id="tMH-E3-ygL"/>
+                        <label alignment="left" text="Beacon Proximity" id="1H3-6h-RFg"/>
+                        <label alignment="left" id="tMH-E3-ygL"/>
                     </items>
                     <connections>
                         <outlet property="proximityLbl" destination="tMH-E3-ygL" id="acT-Tr-Ufv"/>
